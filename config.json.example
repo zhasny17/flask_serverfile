@@ -3,5 +3,6 @@
     "DB_PASSWORD": "",
     "DB_HOST": "",
     "DATABASE": "",
-    "DB_USERNAME": ""
+    "DB_USERNAME": "",
+    "HOST_IP": ""
 }

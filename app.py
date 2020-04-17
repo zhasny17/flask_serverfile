@@ -12,11 +12,13 @@ def populate_env():
             os.environ['DB_PASSWORD'] = json_schema.get('DB_PASSWORD')
             os.environ['DB_HOST'] = json_schema.get('DB_HOST')
             os.environ['DATABASE'] = json_schema.get('DATABASE')
+            os.environ['HOST_IP'] = json_schema.get('HOST_IP')
     except FileNotFoundError:
         print('####### Arquivo de configuracao necessario')
 
 
 if __name__ == '__main__':
     populate_env()
+    host = os.environ['HOST_IP']
     app=create_app()
-    app.run(port=5000)
+    app.run(host=host,port=5000)
