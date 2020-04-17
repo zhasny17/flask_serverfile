@@ -37,5 +37,6 @@ def create_app(config: dict = None) -> dict:
         header['Access-Control-Allow-Origin'] = '*'
         header['Access-Control-Allow-Methods'] = '*'
         header['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization, X-CSRF-TOKEN'
+        return response
 
     return app
