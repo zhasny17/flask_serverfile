@@ -1,0 +1,7 @@
+{
+    "DB_CONNECTOR": "mysql+mysqlconnector",
+    "DB_PASSWORD": "",
+    "DB_HOST": "",
+    "DATABASE": "",
+    "DB_USERNAME": ""
+}
