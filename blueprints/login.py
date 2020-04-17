@@ -10,6 +10,6 @@ def auth():
     api_key = request.headers.get('x-api-key')
     if not api_key:
         raise UnauthorizedException(message='API KEY invalida')
-    account = models.Accounts.quey.filter_by(api_key=api_key).first()
+    account = models.Accounts.query.filter_by(api_key=api_key).first()
     if not account:
         raise UnauthorizedException(message='API KEY invalida')
