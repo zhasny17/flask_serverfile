@@ -4,7 +4,7 @@ bp = Blueprint('video', __name__)
 
 @bp.route('/videos/<string:video_id>', methods=['GET'])
 def get_videos(video_id):
-    file_name = f'{video_id}/prog_index.m3u8'
+    file_name = f'{video_id}/master.m3u8'
     url = url_for(
         'static',
         _external=True,
