@@ -21,4 +21,4 @@ if __name__ == '__main__':
     populate_env()
     print('!!!! Variaveis de ambiente criadas')
     app=create_app()
-    app.run()
+    app.run(host='142.93.249.97', port=5000)
