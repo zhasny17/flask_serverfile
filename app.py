@@ -17,7 +17,8 @@ def populate_env():
         print('####### Arquivo de configuracao necessario')
 
 
-
-populate_env()
-print('!!!! Variaveis de ambiente criadas')
-app=create_app()
+if __name__ == '__main__':
+    populate_env()
+    print('!!!! Variaveis de ambiente criadas')
+    app=create_app()
+    app.run()
