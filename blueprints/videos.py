@@ -3,7 +3,7 @@ import os
 
 bp = Blueprint('video', __name__)
 
-SERVER_NAME = os.environ['SERVER_NAME']
+SERVER_NAME = os.environ.get('SERVER_NAME')
 
 @bp.route('/videos/<string:video_id>', methods=['GET'])
 def get_videos(video_id):
