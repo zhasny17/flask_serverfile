@@ -1,6 +1,7 @@
 from core import create_app
 import os
 import json
+from flask import g
 
 
 def populate_env():
@@ -12,7 +13,8 @@ def populate_env():
             os.environ['DB_PASSWORD'] = json_schema.get('DB_PASSWORD')
             os.environ['DB_HOST'] = json_schema.get('DB_HOST')
             os.environ['DATABASE'] = json_schema.get('DATABASE')
-            os.environ['SERVER_NAME'] = json_schema.get('SERVER_NAME')
+            # os.environ['SERVER_NAME'] = json_schema.get('SERVER_NAME')
+            g.SERVER_NAME = json_schema.get('SERVER_NAME')
     except FileNotFoundError:
         print('####### Arquivo de configuracao necessario')
 

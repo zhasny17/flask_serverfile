@@ -1,9 +1,9 @@
-from flask import Blueprint, redirect, url_for
+from flask import Blueprint, redirect, url_for, g
 import os
 
 bp = Blueprint('video', __name__)
 
-SERVER_NAME = os.environ.get('SERVER_NAME')
+SERVER_NAME = g.get('SERVER_NAME')
 
 @bp.route('/videos/<string:video_id>', methods=['GET'])
 def get_videos(video_id):
