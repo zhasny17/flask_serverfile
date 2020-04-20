@@ -21,4 +21,4 @@ def populate_env():
 populate_env()
 print('!!!! Variaveis de ambiente criadas')
 application=create_app()
-application.run(host='142.93.249.97', port=5000)
+application.run()
