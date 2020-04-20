@@ -12,7 +12,7 @@ def populate_env():
             os.environ['DB_PASSWORD'] = json_schema.get('DB_PASSWORD')
             os.environ['DB_HOST'] = json_schema.get('DB_HOST')
             os.environ['DATABASE'] = json_schema.get('DATABASE')
-            os.environ['HOST_IP'] = json_schema.get('HOST_IP')
+            os.environ['SERVER_NAME'] = json_schema.get('SERVER_NAME')
     except FileNotFoundError:
         print('####### Arquivo de configuracao necessario')
 
