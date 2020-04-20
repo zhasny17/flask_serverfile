@@ -5,7 +5,7 @@ from urllib.parse import urljoin
 from utils.error_handler import UnauthorizedException
 
 bp = Blueprint('login', __name__)
-session = requests.Session
+session = requests.Session()
 
 def return_no_content():
     response = make_response('', 204)
