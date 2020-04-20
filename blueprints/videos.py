@@ -12,6 +12,8 @@ def get_videos(video_id):
         _scheme='http',
         filename=file_name
     )
+    print('!!!!!! IP')
+    url = url.replace('127.0.0.1', '142.93.249.97')
     return  {
         'file': file_name,
         'url': url

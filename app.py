@@ -23,4 +23,4 @@ def populate_env():
 populate_env()
 print('!!!! Variaveis de ambiente criadas')
 application=create_app()
-application.run(host=os.environ['SERVER_NAME'])
+application.run()
