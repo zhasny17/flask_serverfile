@@ -1,5 +1,6 @@
 from flask import Blueprint, request, make_response, current_app
 import requests
+import os
 from urllib.parse import urljoin
 from utils.error_handler import UnauthorizedException
 
