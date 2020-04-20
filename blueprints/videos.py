@@ -1,6 +1,9 @@
 from flask import Blueprint, redirect, url_for
+import os
 
 bp = Blueprint('video', __name__)
+
+SERVER_NAME = os.environ.get('SERVER_NAME')
 
 @bp.route('/videos/<string:video_id>', methods=['GET'])
 def get_videos(video_id):
@@ -11,6 +14,7 @@ def get_videos(video_id):
         _scheme='http',
         filename=file_name
     )
+    url = url.replace('127.0.0.1', SERVER_NAME)
     return  {
         'file': file_name,
         'url': url
