@@ -14,7 +14,7 @@ def populate_env():
             os.environ['DB_HOST'] = json_schema.get('DB_HOST')
             os.environ['DATABASE'] = json_schema.get('DATABASE')
             # os.environ['SERVER_NAME'] = json_schema.get('SERVER_NAME')
-            g.SERVER_NAME = json_schema.get('SERVER_NAME')
+            os.environ['SERVER_NAME'] = json_schema.get('SERVER_NAME')
     except FileNotFoundError:
         print('####### Arquivo de configuracao necessario')
 
@@ -23,4 +23,4 @@ def populate_env():
 populate_env()
 print('!!!! Variaveis de ambiente criadas')
 application=create_app()
-application.run()
+application.run(host=os.environ['SERVER_NAME'])
