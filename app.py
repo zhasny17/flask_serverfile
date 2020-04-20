@@ -17,8 +17,8 @@ def populate_env():
         print('####### Arquivo de configuracao necessario')
 
 
-if __name__ == '__main__':
-    populate_env()
-    print('!!!! Variaveis de ambiente criadas')
-    application=create_app()
-    application.run(host='142.93.249.97', port=5000)
+
+populate_env()
+print('!!!! Variaveis de ambiente criadas')
+application=create_app()
+application.run(host='142.93.249.97', port=5000)
