@@ -1,8 +1,4 @@
 {
-    "DB_CONNECTOR": "mysql+mysqlconnector",
-    "DB_PASSWORD": "",
-    "DB_HOST": "",
-    "DATABASE": "",
-    "DB_USERNAME": "",
-    "SERVER_NAME": ""
+    "SERVER_NAME": "",
+    "KOPA_LIVE_DOMAIN": ""
 }
