@@ -13,7 +13,7 @@ def get_videos(video_id):
         filename=file_name
     )
     server_name = os.environ['SERVER_NAME']
-    url = url.replace('127.0.0.1', server_name)
+    # url = url.replace('127.0.0.1', server_name)
     return  {
         'file': file_name,
         'url': url
